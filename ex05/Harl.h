@@ -10,9 +10,11 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#   ifndef HARLE_H
-# define HARLE_H
+#   ifndef HARL_H
+# define HARL_H
 
-# include "Harl.hpp"
+#include <iostream>
+#include <string>
+#include "Harl.hpp"
 
 #   endif
