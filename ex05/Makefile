@@ -6,7 +6,7 @@ CC = c++
 
 CFLAGS = -Wall -Werror -Wextra -std=c++98
 
-NAME = zombie
+NAME = harl
 
 $(NAME) :
 	@$(CC) $(CFLAGS) -o $(NAME) $(SRCS)

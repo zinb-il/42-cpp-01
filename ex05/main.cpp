@@ -14,5 +14,14 @@
 
 int main()
 {
+    Harl h;
+
+    h.complain("debug");
+    h.complain("bacon");
+    h.complain("burger");
+    h.complain("DEBUG");
+    h.complain("INFO");
+    h.complain("WARNING");
+    h.complain("ERROR");
     return 0;
 }
