@@ -12,16 +12,13 @@
 
 # include "Harl.h"
 
-int main()
+int main(int ac, char **av)
 {
     Harl h;
 
-    h.complain("yyyyyy");
-    h.complain("test2222");
-    h.complain("test");
-    h.complain("DEBUG");
-    h.complain("INFO");
-    h.complain("WARNING");
-    h.complain("ERROR");
+    if (ac != 2)
+        std::cout << "Les paramètres passés sont incorrects" << std::endl;
+    else
+        h.complain(av[1]);
     return 0;
 }

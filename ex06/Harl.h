@@ -1,27 +1,20 @@
- /* ************************************************************************** */
+/* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Harl.h                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ziloughm <ziloughm@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/26 11:10:11 by ziloughm          #+#    #+#             */
-/*   Updated: 2023/01/28 21:47:50 by ziloughm         ###   ########.fr       */
+/*   Created: 2023/01/28 21:46:19 by ziloughm          #+#    #+#             */
+/*   Updated: 2023/01/28 21:47:53 by ziloughm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "Harl.h"
+#   ifndef HARL_H
+# define HARL_H
 
-int main()
-{
-    Harl h;
+#include <iostream>
+#include <string>
+#include "Harl.hpp"
 
-    h.complain("yyyyyy");
-    h.complain("test2222");
-    h.complain("test");
-    h.complain("DEBUG");
-    h.complain("INFO");
-    h.complain("WARNING");
-    h.complain("ERROR");
-    return 0;
-}
+#   endif
