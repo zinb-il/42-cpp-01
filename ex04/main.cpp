@@ -6,7 +6,7 @@
 /*   By: ziloughm <ziloughm@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/26 11:10:11 by ziloughm          #+#    #+#             */
-/*   Updated: 2023/01/28 21:27:51 by ziloughm         ###   ########.fr       */
+/*   Updated: 2023/01/30 12:02:04 by ziloughm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,11 @@ int main(int ac, char **av)
     || static_cast<std::string>(av[3]).empty())
         exitFunction("Les paramètres passés sont vides");
     Replace rp(static_cast<std::string>(av[1]));
-    if (!rp.getInputfile()->good() || !rp.getOutputfile()->good())
+    if (!rp.getInputfile()->good())
         exitFunction("Une erreur s'est produite lors de l'ouverture du fichier");
-    rp.read_file(static_cast<std::string>(av[2]), static_cast<std::string>(av[3]));
+    rp.setOutputfile();
+    if (!rp.getOutputfile()->good())
+        exitFunction("Une erreur s'est produite lors de l'ouverture du fichier");
+    rp.read_replace_file(static_cast<std::string>(av[2]), static_cast<std::string>(av[3]));
     return 0;
 }

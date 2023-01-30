@@ -6,7 +6,7 @@
 /*   By: ziloughm <ziloughm@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/28 18:12:59 by ziloughm          #+#    #+#             */
-/*   Updated: 2023/01/28 20:56:54 by ziloughm         ###   ########.fr       */
+/*   Updated: 2023/01/30 12:01:21 by ziloughm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ class Replace
         ~Replace();
         std::ifstream* getInputfile(void);
         std::ofstream* getOutputfile(void);
-        void    read_file(std::string s1, std::string s2);
+        void    setOutputfile(void);
+        void    read_replace_file(std::string s1, std::string s2);
 };
 #   endif

@@ -6,7 +6,7 @@
 /*   By: ziloughm <ziloughm@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/26 17:32:45 by ziloughm          #+#    #+#             */
-/*   Updated: 2023/01/26 18:17:07 by ziloughm         ###   ########.fr       */
+/*   Updated: 2023/01/30 11:53:12 by ziloughm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,9 @@
 
 HumanB::~HumanB()
 {
-    //std::cout << "The " << this->name << "was destroyed" << std::endl;
 }
 HumanB::HumanB(std::string nom) : name(nom), weapon(NULL)
 {
-    
 }
 void    HumanB::attack(void)
 {

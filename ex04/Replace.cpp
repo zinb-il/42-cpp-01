@@ -6,7 +6,7 @@
 /*   By: ziloughm <ziloughm@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/28 18:17:34 by ziloughm          #+#    #+#             */
-/*   Updated: 2023/01/28 21:36:29 by ziloughm         ###   ########.fr       */
+/*   Updated: 2023/01/30 12:02:39 by ziloughm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 
 Replace::Replace()
 {
-    
 }
 Replace::~Replace()
 {
@@ -23,7 +22,6 @@ Replace::~Replace()
 Replace::Replace(std::string file) : file_in(file)
 {
     this->inputfile = new std::ifstream (file, std::ifstream::binary);
-    this->outputfile = new std::ofstream (file + ".replace", std::ios::binary);
 }
 
 std::ifstream* Replace::getInputfile(void)
@@ -36,7 +34,12 @@ std::ofstream* Replace::getOutputfile(void)
     return (this->outputfile);
 }
 
-void    Replace::read_file(std::string s1, std::string s2)
+void    Replace::setOutputfile(void)
+{
+    this->outputfile = new std::ofstream (this->file_in + ".replace", std::ios::binary);
+}
+
+void    Replace::read_replace_file(std::string s1, std::string s2)
 {
     std::stringstream   f_str;
     std::string         str;
